@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class TicketDataLoader implements CommandLineRunner {
 
-
     @Autowired
     private TicketRepository ticketRepository;
 

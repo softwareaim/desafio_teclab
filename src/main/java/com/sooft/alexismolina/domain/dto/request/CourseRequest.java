@@ -9,6 +9,7 @@ import javax.validation.constraints.Size;
 @Getter
 @Setter
 public class CourseRequest {
+
     @NotBlank
     @Size(min = 2, max = 50)
     private String name;

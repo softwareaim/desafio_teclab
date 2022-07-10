@@ -1,6 +1,7 @@
 package com.sooft.alexismolina.domain.model;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
@@ -18,6 +19,7 @@ import java.util.Set;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @Entity
 @Table(name = "student")
 @SQLDelete(sql = "UPDATE student SET deleted = true WHERE id=?")
@@ -60,4 +62,11 @@ public class Student implements Serializable {
     private LocalDateTime updateDateTime;
 
     private Boolean deleted = false;
+
+    public Student(String name, String lastname, String dni, String mail) {
+        this.name = name;
+        this.lastname = lastname;
+        this.dni = dni;
+        this.mail = mail;
+    }
 }

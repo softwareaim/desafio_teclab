@@ -5,12 +5,13 @@ import com.sooft.alexismolina.domain.model.Comment;
 import com.sooft.alexismolina.domain.service.ITicketService;
 import com.sooft.alexismolina.domain.dto.PageDTO;
 import com.sooft.alexismolina.domain.dto.response.TicketResponse;
+import com.sooft.alexismolina.util.paginator.Url;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/tickets")
+@RequestMapping(Url.TICKETS_URI)
 public class TicketController implements TicketApi {
 
     @Autowired

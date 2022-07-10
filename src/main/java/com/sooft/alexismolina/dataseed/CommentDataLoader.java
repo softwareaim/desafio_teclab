@@ -6,10 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-
 @Component
 public class CommentDataLoader implements CommandLineRunner {
-
 
     @Autowired
     private CommentRepository commentRepository;
@@ -30,7 +28,6 @@ public class CommentDataLoader implements CommandLineRunner {
             this.commentRepository.save(new Comment("pass the details of the problems"));
         }
     }
-
 
 
 }
